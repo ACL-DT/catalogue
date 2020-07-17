@@ -53,6 +53,7 @@ pipeline {
       }
       steps {
         container('docker') {
+          sh "docker login -u adarby005 -p zR+9Zs=8XQnLebQOoqtPuKBjtgPV4Pa6 adarby005.azurecr.io"
           sh "docker build -t ${env.TAG_DEV} ."
         }
       }
